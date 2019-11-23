@@ -12,14 +12,18 @@ body {
     background-image: url(./static/cover.jpg);
     background-size: cover;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .user-card {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 500px;
     height: 500px;
-    margin: 100px 50%;
-    left: -250px;
     box-shadow: 2px 2px 2px #ccc,2px -2px 2px #ccc,-2px 2px 2px #ccc,-2px -2px 2px #ccc;
     background-color: #fff;
     border-radius: 2%;
@@ -34,25 +38,26 @@ body {
 }
 
 .user-photo {
+    margin-top: 40px;
+    margin-bottom: 30px;
     width: 100px;
     height: 100px;
-    margin: 40px 200px 20px;
     border-radius: 50%;
 }
 
-.user-name, .user-des {
+.user-name, 
+.user-des {
     font-weight: 900;
-    text-align: center;
 }
 
 .user-name {
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #6d695f;
     margin-bottom: 25px;
 }
 
 .user-des {
-    font-size: 1em;
+    font-size: 1.2em;
     color: #9b9588;
 }
 
@@ -63,27 +68,23 @@ body {
     height: 50%;
 }
 
-.user-album, .user-location {
+.user-album, 
+.user-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 50%;
     height: 100%;
 }
 
 .list-icon {
-    position: relative;
-    margin: 30% 50% 10px;
-    left: -15px;
+    padding-bottom: 10px;
     width: 30px;
     height: 30px;
 }
 
-.list-text {
-    text-align: center;
-}
-
 .animation {
-    width: 600px;
-    height: 600px;
-    position: relative;
     animation-name: bounce-in;
     animation-duration: 1s;
     animation-iteration-count: 1;
@@ -91,27 +92,37 @@ body {
     animation-delay: 0;
     animation-fill-mode: forwards;
     animation-play-state: running;
-    transform: translate(-50%,-50%);
 
     /* Safari  and Chrome */
-    -webkit-animation-name: bounce-in;
+     -webkit-animation-name: bounce-in;
     -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease;
     -webkit-animation-delay: 0;
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-play-state: running;
-    -webkit-transform: translate(-50%,-50%);
 }
 
 @keyframes bounce-in {
-    0% {left: 50%; top: 0%;} 
-    100% {left: 50%; top: 50%;}
+    0% {
+        left: 0;
+        top: -100%;
+    } 
+    100% {
+        left: 0;
+        top: 0;
+    }
 }
 
 /* Safari and Chrome */
 @-webkit-keyframes bounce-in {
-    0% {left: 50%; top: 0%;}
-    100% {left: 50%; top: 50%;}
+    0% {
+        left: 50%; 
+        top: 0%;
+    }
+    100% {
+        left: 50%; 
+        top: 50%;
+    }
 
 }
