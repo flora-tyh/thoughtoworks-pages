@@ -131,26 +131,26 @@ span {
     font-size: 25px;
 }
 
-.list{
+.list {
     margin: 50px;
     width: 80%;
 }
 
-li{
+.article-li {
     width: 100%;
     display: flex;
     flex-direction: row;
     border-top: 3px solid rgba(0,0,0,0.4);
 }
 
-li > img {
-    width:340px;
-    height:260px;
-    padding: 10px;
+.article-img {
+    margin: 10px;
+    flex-grow: 1;
 }
 
 .article-info {
     padding: 10px;
+    flex-grow: 2;
 }
 
 .article-title {
@@ -174,9 +174,8 @@ li > img {
     color: rgba(0,0,0,0.6);
 }
 
-.article-link{
+.article-link {
     margin-left: 50px;
-    text-decoration: none;
 }
 
 .clearfloat {
