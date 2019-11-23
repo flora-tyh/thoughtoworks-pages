@@ -21,6 +21,7 @@ body {
     left: -300px;
     box-shadow: 5px 5px 5px 5px #ccc;
     background-color: #fff;
+    z-index: 2000;
 }
 
 .user-photo {
@@ -28,4 +29,39 @@ body {
     height: 130px;
     margin: 50px 235px;
     border-radius: 50%;
+}
+
+.animation {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    animation-name: bounce-in;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    transform: translate(-50%,-50%);
+
+    /* Safari  and Chrome */
+    -webkit-animation-name: bounce-in;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-delay: 0;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-play-state: running;
+    -webkit-transform: translate(-50%,-50%);
+}
+
+@keyframes bounce-in {
+    0%   {left: 0%; top: 0%;} 
+    100% {left:50%; top:50%;}
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes bounce-in {
+    0% {left: 0%; top: 0%;}
+    100% {left: 0%; top: 0%;}
 }
