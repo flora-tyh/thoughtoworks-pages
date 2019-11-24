@@ -145,12 +145,14 @@ span {
 
 .article-img {
     margin: 10px;
-    flex-grow: 1;
+    width: 0;
+    flex-grow: 2;
 }
 
 .article-info {
     padding: 10px;
-    flex-grow: 2;
+    width: 0;
+    flex-grow: 5;
 }
 
 .article-title {
@@ -167,15 +169,16 @@ span {
 }
 
 .article-des {
-    margin-top: 20px;
+    margin-top: 8px;
     margin-left: 50px;
     line-height: 35px;
-    font-size: 1.3em;
+    font-size: 1.1em;
     color: rgba(0,0,0,0.6);
 }
 
 .article-link {
     margin-left: 50px;
+    align-self: flex-end;
 }
 
 .clearfloat {
